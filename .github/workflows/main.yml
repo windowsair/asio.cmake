@@ -28,6 +28,10 @@ jobs:
         with:
           cmakeVersion: ${{ matrix.cmake_version }}
       -
+        name: setup visual studio path
+        if: matrix.os == 'windows-latest'
+        uses: ilammy/msvc-dev-cmd@v1
+      -
         name: 🔧 asio
         run: |
           cmake -E make_directory build
