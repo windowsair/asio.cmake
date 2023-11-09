@@ -23,7 +23,9 @@ jobs:
         cmake_version: [ latestrc ]
         include:
           - os: ubuntu-latest
-            cmake_version: [3.14, 3.24]
+            cmake_version: 3.14
+          - os: ubuntu-latest
+            cmake_version: 3.24
     steps:
       - uses: actions/checkout@v2
       - uses: lukka/get-cmake@latest
